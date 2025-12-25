@@ -22,3 +22,17 @@ This project focuses on transforming the raw FAO dataset into a clean, analysis-
 - SQL (data transformation, unpivoting, data quality checks)
 - Power BI (data modeling, visualization, dashboards)
 - Excel / CSV (raw data storage)
+
+## SQL Pipeline Overview
+
+The SQL scripts in this project were executed in a logical pipeline to transform raw FAO agricultural data into an analytical, dashboard-ready format.
+
+1. **01_unpivot_fao_data.sql**  
+   Converts the raw FAO dataset from a wide yearly format into a long-format table (`FAO_Unpivoted`) to enable time-series analysis.
+
+2. **02_data_quality_checks.sql**  
+   Creates a row-level data quality view (`FAO_DataQuality_RowLevel`) with flags for missing values, zero values, and numeric validation.  
+   This logic reflects the final, production-ready SQL used in the Power BI dashboard.
+
+3. **03_continent_mapping.sql**  
+   Enriches the dataset by mapping countries to continents for regional analysis and aggregation.
