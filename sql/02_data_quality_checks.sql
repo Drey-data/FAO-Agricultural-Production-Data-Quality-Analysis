@@ -57,6 +57,7 @@ SELECT
 
 FROM
     FAO_Unpivoted;
+
 GO
 
 -- End of 02_data_quality_checks.sql
