@@ -34,5 +34,24 @@ The SQL scripts in this project were executed in a logical pipeline to transform
    Creates a row-level data quality view (`FAO_DataQuality_RowLevel`) with flags for missing values, zero values, and numeric validation.  
    This logic reflects the final, production-ready SQL used in the Power BI dashboard.
 
+## Repository Structure
+The repository is organized to clearly separate raw data, SQL logic, analysis outputs, and presentation materials.
+
+- **data/**
+  - Contains the FAO agricultural production dataset.
+  - `raw/` holds the original, unmodified FAO CSV file used for the project.
+  - `processed/` is reserved for cleaned or transformed datasets (optional, for documentation or export purposes).
+
+- **sql/**
+  - Contains all SQL scripts used for data transformation and data quality checks.
+  - Scripts are numbered to reflect the logical execution order of the pipeline.
+
+- **powerbi/**
+  - Contains the Power BI dashboard built on top of the cleaned and standardized data.
+  - This dashboard is used for trend analysis, regional comparisons, and data quality insights.
+
+- **presentation/**
+  - Contains the PowerPoint presentation used to communicate the project background, methodology, insights, and recommendations.
+
 3. **03_continent_mapping.sql**  
    Enriches the dataset by mapping countries to continents for regional analysis and aggregation.
