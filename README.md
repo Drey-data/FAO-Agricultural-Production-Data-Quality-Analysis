@@ -33,6 +33,8 @@ The SQL scripts in this project were executed in a logical pipeline to transform
 2. **02_data_quality_checks.sql**  
    Creates a row-level data quality view (`FAO_DataQuality_RowLevel`) with flags for missing values, zero values, and numeric validation.  
    This logic reflects the final, production-ready SQL used in the Power BI dashboard.
+3. **03_continent_mapping.sql**  
+   Enriches the dataset by mapping countries to continents for regional analysis and aggregation.
 
 ## Repository Structure
 The repository is organized to clearly separate raw data, SQL logic, analysis outputs, and presentation materials.
@@ -53,5 +55,3 @@ The repository is organized to clearly separate raw data, SQL logic, analysis ou
 - **presentation/**
   - Contains the PowerPoint presentation used to communicate the project background, methodology, insights, and recommendations.
 
-3. **03_continent_mapping.sql**  
-   Enriches the dataset by mapping countries to continents for regional analysis and aggregation.
